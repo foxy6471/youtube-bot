@@ -1,0 +1,364 @@
+Python 3.9.7 (tags/v3.9.7:1016ef3, Aug 30 2021, 20:19:38) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>  pip install seleniumfrom selenium import webdriver
+  File "<stdin>", line 1
+    pip install seleniumfrom selenium import webdriver
+IndentationError: unexpected indent
+>>>
+>>> browser = webdriver.Chrome('./chromedriver')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'webdriver' is not defined
+>>> from selenium import webdriver
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'selenium'
+>>>
+>>> browser = webdriver.Chrome('./chromedriver')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'webdriver' is not defined
+>>> browser.get("https://www.youtube.com")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'browser' is not defined
+>>> def login_with_username_and_password(browser, username, password):
+...
+  File "<stdin>", line 2
+
+    ^
+IndentationError: expected an indented block
+>>>     # Type email
+>>>     email_input = browser.find_element_by_css_selector('input[type=email]')
+  File "<stdin>", line 1
+    email_input = browser.find_element_by_css_selector('input[type=email]')
+IndentationError: unexpected indent
+>>>
+>>>     email = username
+  File "<stdin>", line 1
+    email = username
+IndentationError: unexpected indent
+>>>     for letter in email:
+  File "<stdin>", line 1
+    for letter in email:
+IndentationError: unexpected indent
+>>>         email_input.send_keys(letter)
+  File "<stdin>", line 1
+    email_input.send_keys(letter)
+IndentationError: unexpected indent
+>>>         wait_time = random.randint(0,1000)/1000
+  File "<stdin>", line 1
+    wait_time = random.randint(0,1000)/1000
+IndentationError: unexpected indent
+>>>         time.sleep(wait_time)
+  File "<stdin>", line 1
+    time.sleep(wait_time)
+IndentationError: unexpected indent
+>>>
+>>>     # Click next
+>>>     next_button = browser.find_elements_by_css_selector("button")
+  File "<stdin>", line 1
+    next_button = browser.find_elements_by_css_selector("button")
+IndentationError: unexpected indent
+>>>     time.sleep(2)
+  File "<stdin>", line 1
+    time.sleep(2)
+IndentationError: unexpected indent
+>>>     next_button[2].click()
+  File "<stdin>", line 1
+    next_button[2].click()
+IndentationError: unexpected indent
+>>>     time.sleep(2)
+  File "<stdin>", line 1
+    time.sleep(2)
+IndentationError: unexpected indent
+>>>
+>>>     # Type password
+>>>     password_input = browser.find_elements_by_css_selector('input[type=password]')
+  File "<stdin>", line 1
+    password_input = browser.find_elements_by_css_selector('input[type=password]')
+IndentationError: unexpected indent
+>>>     password = password
+  File "<stdin>", line 1
+    password = password
+IndentationError: unexpected indent
+>>>     for letter in password:
+  File "<stdin>", line 1
+    for letter in password:
+IndentationError: unexpected indent
+>>>         password_input.send_keys(letter)
+  File "<stdin>", line 1
+    password_input.send_keys(letter)
+IndentationError: unexpected indent
+>>>         wait_time = random.randint(0,1000)/1000
+  File "<stdin>", line 1
+    wait_time = random.randint(0,1000)/1000
+IndentationError: unexpected indent
+>>>         time.sleep(wait_time)
+  File "<stdin>", line 1
+    time.sleep(wait_time)
+IndentationError: unexpected indent
+>>>
+>>>     # Click next
+>>>     next_button = browser.find_elements_by_css_selector("button")
+  File "<stdin>", line 1
+    next_button = browser.find_elements_by_css_selector("button")
+IndentationError: unexpected indent
+>>>     time.sleep(2)
+  File "<stdin>", line 1
+    time.sleep(2)
+IndentationError: unexpected indent
+>>>     next_button[1].click()
+  File "<stdin>", line 1
+    next_button[1].click()
+IndentationError: unexpected indent
+>>>
+>>>     # Click Confirm
+>>>     confirm_button = browser.find_elements_by_css_selector("div[role=button]")
+  File "<stdin>", line 1
+    confirm_button = browser.find_elements_by_css_selector("div[role=button]")
+IndentationError: unexpected indent
+>>>     time.sleep(2)
+  File "<stdin>", line 1
+    time.sleep(2)
+IndentationError: unexpected indent
+>>>     if(len(confirm_button)>0):
+  File "<stdin>", line 1
+    if(len(confirm_button)>0):
+IndentationError: unexpected indent
+>>>         confirm_button[1].click()
+  File "<stdin>", line 1
+    confirm_button[1].click()
+IndentationError: unexpected indent
+>>>     browser.find_elements_by_css_selector('')
+  File "<stdin>", line 1
+    browser.find_elements_by_css_selector('')
+IndentationError: unexpected indent
+>>>     browser.find_element_by_css_selector('')
+  File "<stdin>", line 1
+    browser.find_element_by_css_selector('')
+IndentationError: unexpected indent
+>>>     browser.find_elements_by_css_selector('')
+  File "<stdin>", line 1
+    browser.find_elements_by_css_selector('')
+IndentationError: unexpected indent
+>>> browser.find_element_by_css_selector('')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'browser' is not defined
+>>> next_button = browser.find_elements_by_css_selector("button")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'browser' is not defined
+>>> next_button[2].click()password_input = browser.find_elements_by_css_selector('input[type=password]')
+  File "<stdin>", line 1
+    next_button[2].click()password_input = browser.find_elements_by_css_selector('input[type=password]')
+                          ^
+SyntaxError: invalid syntax
+>>> password_input.send_keys("any string can go here")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'password_input' is not defined
+>>> def enter_search_term(browser,search_term):
+...     # Enter text on the search term
+...     search_input = browser.find_element_by_id("search")
+...     for letter in search_term:
+...         search_input.send_keys(letter)
+...         wait_time = random.randint(0,1000)/1000
+...         time.sleep(wait_time)
+...
+>>>     search_input.send_keys(Keys.ENTER)
+  File "<stdin>", line 1
+    search_input.send_keys(Keys.ENTER)
+IndentationError: unexpected indent
+>>> search_input = browser.find_element_by_id("search")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'browser' is not defined
+>>> for letter in search_term:
+... search_input.send_keys(letter)
+  File "<stdin>", line 2
+    search_input.send_keys(letter)
+    ^
+IndentationError: expected an indented block
+>>>     # Quick pause between letter to replicate human behavior
+>>>     wait_time = random.randint(0,1000)/1000
+  File "<stdin>", line 1
+    wait_time = random.randint(0,1000)/1000
+IndentationError: unexpected indent
+>>>     time.sleep(wait_time)
+  File "<stdin>", line 1
+    time.sleep(wait_time)
+IndentationError: unexpected indent
+>>> thumbnails = browser.find_elements_by_css_selector("ytd-video-renderer")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'browser' is not defined
+>>>
+>>>     for index in range(1,6):
+  File "<stdin>", line 1
+    for index in range(1,6):
+IndentationError: unexpected indent
+>>>         thumbnails[index].click()
+  File "<stdin>", line 1
+    thumbnails[index].click()
+IndentationError: unexpected indent
+>>> from selenium.webdriver.common.action_chains import ActionChains
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'selenium'
+>>>
+>>> def enter_comment(browser, comment):
+...     comment_input = browser.find_element_by_css_selector("ytd-comment-simplebox-renderer")
+...
+>>>     entering_comment_actions = ActionChains(browser)
+  File "<stdin>", line 1
+    entering_comment_actions = ActionChains(browser)
+IndentationError: unexpected indent
+>>>
+>>>     entering_comment_actions.move_to_element(comment_input)
+  File "<stdin>", line 1
+    entering_comment_actions.move_to_element(comment_input)
+IndentationError: unexpected indent
+>>>     entering_comment_actions.click()
+  File "<stdin>", line 1
+    entering_comment_actions.click()
+IndentationError: unexpected indent
+>>>
+>>>     for letter in comment:
+  File "<stdin>", line 1
+    for letter in comment:
+IndentationError: unexpected indent
+>>>         entering_comment_actions.send_keys(letter)
+  File "<stdin>", line 1
+    entering_comment_actions.send_keys(letter)
+IndentationError: unexpected indent
+>>>         wait_time = random.randint(0,1000)/1000
+  File "<stdin>", line 1
+    wait_time = random.randint(0,1000)/1000
+IndentationError: unexpected indent
+>>>         entering_comment_actions.pause(wait_time)
+  File "<stdin>", line 1
+    entering_comment_actions.pause(wait_time)
+IndentationError: unexpected indent
+>>>
+>>>     entering_comment_actions.perform()
+  File "<stdin>", line 1
+    entering_comment_actions.perform()
+IndentationError: unexpected indent
+>>>
+>>>     time.sleep(1)
+  File "<stdin>", line 1
+    time.sleep(1)
+IndentationError: unexpected indent
+>>>
+>>>     send_comment_button = browser.find_element_by_id("submit-button")
+  File "<stdin>", line 1
+    send_comment_button = browser.find_element_by_id("submit-button")
+IndentationError: unexpected indent
+>>>     send_comment_button.click()
+  File "<stdin>", line 1
+    send_comment_button.click()
+IndentationError: unexpected indent
+>>>  browser.execute_script("window.history.go(-1)")
+  File "<stdin>", line 1
+    browser.execute_script("window.history.go(-1)")
+IndentationError: unexpected indent
+>>> browser = webdriver.Chrome('./chromedriver')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'webdriver' is not defined
+>>> browser.get("https://www.youtube.com")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'browser' is not defined
+>>>
+>>> # Click Agree and Sing In
+>>> click_on_agree_and_signin(browser)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'click_on_agree_and_signin' is not defined
+>>>
+>>> # Sign In
+>>> login_with_username_and_password(browser, "your_username_here", "your_password_here")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'login_with_username_and_password' is not defined
+>>>
+>>> all_search_terms =['make money online','online marketing']
+>>> for search_term in all_search_terms:
+...     enter_search_term(browser, search_term)
+...     time.sleep(2)
+...
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+NameError: name 'browser' is not defined
+>>>     thumbnails = browser.find_elements_by_css_selector("ytd-video-renderer")
+  File "<stdin>", line 1
+    thumbnails = browser.find_elements_by_css_selector("ytd-video-renderer")
+IndentationError: unexpected indent
+>>>
+>>>     for index in range(1,6):
+  File "<stdin>", line 1
+    for index in range(1,6):
+IndentationError: unexpected indent
+>>>         thumbnails[index].click()
+  File "<stdin>", line 1
+    thumbnails[index].click()
+IndentationError: unexpected indent
+>>>         time.sleep(6)
+  File "<stdin>", line 1
+    time.sleep(6)
+IndentationError: unexpected indent
+>>>
+>>>         enter_comment(browser,"your comment here")
+  File "<stdin>", line 1
+    enter_comment(browser,"your comment here")
+IndentationError: unexpected indent
+>>>         browser.execute_script("window.history.go(-1)")
+  File "<stdin>", line 1
+    browser.execute_script("window.history.go(-1)")
+IndentationError: unexpected indent
+>>>         thumbnails = browser.find_elements_by_css_selector("ytd-video-renderer")
+  File "<stdin>", line 1
+    thumbnails = browser.find_elements_by_css_selector("ytd-video-renderer")
+IndentationError: unexpected indent
+>>> def click_on_agree_and_signin(browser):
+...     agree_button= browser.find_element_by_css_selector('button')
+...     time.sleep(2)
+...     agree_button.click()
+...
+>>>     signin_buttons= browser.find_elements_by_css_selector('yt-button-renderer')
+  File "<stdin>", line 1
+    signin_buttons= browser.find_elements_by_css_selector('yt-button-renderer')
+IndentationError: unexpected indent
+>>>     time.sleep(6) # Wait longer so the message pops up
+  File "<stdin>", line 1
+    time.sleep(6) # Wait longer so the message pops up
+IndentationError: unexpected indent
+>>>     while(len(signin_buttons)== 0):
+  File "<stdin>", line 1
+    while(len(signin_buttons)== 0):
+IndentationError: unexpected indent
+>>>         signin_buttons= browser.find_elements_by_css_selector('yt-button-renderer')
+  File "<stdin>", line 1
+    signin_buttons= browser.find_elements_by_css_selector('yt-button-renderer')
+IndentationError: unexpected indent
+>>>         time.sleep(1)
+  File "<stdin>", line 1
+    time.sleep(1)
+IndentationError: unexpected indent
+>>>
+>>>     signin_buttons[1].click()
+  File "<stdin>", line 1
+    signin_buttons[1].click()
+IndentationError: unexpected indent
+>>> login_with_username_and_password(browser, "i love you all", "HEWNJH**392!")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'login_with_username_and_password' is not defined
+>>> login_with_username_and_password(browser, "i love you all", "HEWNJH**392!")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'login_with_username_and_password' is not defined
+>>> enter_comment(browser,"Hi y'all! Daily reminder that I love everyone in this comment section. Have a great day!!<3")
